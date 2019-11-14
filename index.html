@@ -1,12 +1,139 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Matt's Personal Page</title>
-        <link rel="stylesheet" href="style.css" />
-    </head>
-    
-    <body>
-        <h1>Hi!</h1>
-    </body>
+<html lang="en-us">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Matt Petrower</title>
+
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Stylesheet: Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <!-- Stylesheet: Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Stylesheet: style.css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="#">
+            <!-- <img src="" alt="Logo" style="width: 40px;"> -->
+            Matt Petrower
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <a class="nav-link">About</a>
+                <a class="nav-link">Portfolio</a>
+                <a class="nav-link">Contact</a>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Jumbotron -->
+    <div class="container-main">
+        <div class="jumbotron text-center">
+            <h1 class="display-4">Matthew S. Petrower</h1>
+            <h6>(203) 962-4618</h6>
+            <h6>msp9612@gmail.com</h6>
+            <hr class="my-6">
+            <p class="lead">
+                Junior Software Engineer currently attending intensive six-month UCONN Coding Boot Camp
+            </p>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <!-- GitHub, LinkedIn, and resume -->
+        <div class="row">
+            <div class=col-lg-4>
+                <div class="card text-center" style="width: 18rem; padding-top: 1rem">
+                    <i class="fa fa-github-square fa-5x"></i>
+                    <div class="card-body">
+                        <h5 class="card-title">Github Profile</h5>
+                    </div>
+                </div>
+            </div>
+            <div class=col-lg-4>
+                <div class="card text-center" style="width: 18rem; padding-top: 1rem">
+                    <i class="fa fa-linkedin-square fa-5x"></i>
+                    <div class="card-body">
+                        <h5 class="card-title">LinkedIn Page</h5>
+                    </div>
+                </div>
+            </div>
+            <div class=col-lg-4>
+                <div class="card text-center" style="width: 18rem; padding-top: 1rem">
+                    <i class="fa fa-file fa-5x"></i>
+                    <div class="card-body">
+                        <h5 class="card-title">Resume</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- About Me -->
+        <!-- UNDER CONSTRUCTION -->
+        <div class="row" style="margin-top: 50px">
+            <div class=col-lg-4>
+                Photo
+            </div>
+            <div class=col-lg-8>
+                About Me
+            </div>
+        </div>
+
+        <!-- Portfolio -->
+        <!-- UNDER CONSTRUCTION -->
+        <div class="row" style="margin-top: 50px">
+            Portfolio
+            |<a href="https://msp9612.github.io/TrainScheduler/" target='_blank' rel='no-loop no-reopener'>
+                Train Scheduler - Deployed</a>
+            |<a href="https://github.com/msp9612/TrainScheduler" target='_blank' rel='no-loop no-reopener'>
+                Train Scheduler - GitHub</a>
+            |<a href="https://github.com/msp9612/LIRINodeApp" target='_blank' rel='no-loop no-reopener'>
+                LIRI - GitHub</a>
+            |<a href="https://github.com/msp9612/bamazon-node-app" target='_blank' rel='no-loop no-reopener'>
+                Bamazon - GitHub</a>
+        </div>
+
+        <!-- Contact -->
+        <!-- UNDER CONSTRUCTION -->
+        <div class="row" style="margin-top: 50px">
+            <form>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="John Smith" required="required">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="example@gmail.com"
+                        required="required">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea class="form-control" rows="5" id="message" required="required"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Script -->
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
+
+</body>
 
 </html>
