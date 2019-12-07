@@ -18,13 +18,20 @@
     <!-- Stylesheet: style.css -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
+    <script>
+        // Adjust position when using navbar links to avoid blocking content
+        var shiftWindow = function () { scrollBy(0, -50) };
+        window.addEventListener("hashchange", shiftWindow);
+        function load() { if (window.location.hash) shiftWindow(); }
+    </script>
+
 </head>
 
 <body>
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="#pageTop">
             <!-- <img src="" alt="Logo" style="width: 40px;"> -->
             Matt Petrower
         </a>
@@ -34,35 +41,68 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <a class="nav-link">About</a>
-                <a class="nav-link">Portfolio</a>
-                <a class="nav-link">Contact</a>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#portfolio">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
             </ul>
         </div>
     </nav>
 
     <!-- Jumbotron -->
-    <div class="container-main">
+    <div class="container-main" id="pageTop">
         <div class="jumbotron text-center">
             <h1 class="display-4">Matthew S. Petrower</h1>
-            <h6>(203) 962-4618</h6>
             <h6>msp9612@gmail.com</h6>
             <hr class="my-6">
             <p class="lead">
-                Junior Software Engineer currently attending intensive six-month UCONN Coding Boot Camp
+                Junior Web Developer currently attending intensive six-month UCONN Coding Boot Camp
             </p>
         </div>
     </div>
 
     <div class="container">
 
-        <!-- GitHub, LinkedIn, and resume -->
+        <!-- About Me -->
+        <h4 class="mb-3 text-center" id="about" style="margin-top: 50px">About Me</h4>
         <div class="row">
+            <div class="media">
+                <img src="images/DSCN9155-2.jpg" class="align-self-center mr-3" alt="Matt Petrower" width=25%>
+                <div class="media-body">
+                    <!-- <h5 class="mb-3">About Me</h5> -->
+                    <p>
+                        Hi! I'm Matt.<br><br>
+
+                        Not much else can satisfy me more than seeing back-end code run successfully,
+                        and completing the front-end design afterwards feels like celebrating a job
+                        well done.<br><br>
+
+                        My most notable strengths as a full-stack developer include problem solving and
+                        attention to detail. There are often many possible routes for completing a task,
+                        and I like finding the one that feels the best for me. Furthermore, I enjoy
+                        expressing myself throughout the entire development process, from working on key
+                        features to addressing small details.<br><br>
+
+                        I have done the majority of my work in HTML, JavaScript, and SQL. I also have
+                        experience with Java, PHP, and XML.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- GitHub, LinkedIn, and resume -->
+        <div class="row" style="margin-top: 25px">
             <div class=col-lg-4>
                 <div class="card text-center" style="width: 18rem; padding-top: 1rem">
                     <i class="fa fa-github-square fa-5x"></i>
                     <div class="card-body">
                         <h5 class="card-title">Github Profile</h5>
+                        <a class="stretched-link" href="https://github.com/msp9612" target="_blank"></a>
                     </div>
                 </div>
             </div>
@@ -71,6 +111,8 @@
                     <i class="fa fa-linkedin-square fa-5x"></i>
                     <div class="card-body">
                         <h5 class="card-title">LinkedIn Page</h5>
+                        <a class="stretched-link" href="https://www.linkedin.com/in/matt-petrower-404296bb/"
+                            target="_blank"></a>
                     </div>
                 </div>
             </div>
@@ -79,25 +121,16 @@
                     <i class="fa fa-file fa-5x"></i>
                     <div class="card-body">
                         <h5 class="card-title">Resume</h5>
+                        <a class="stretched-link" href="MattPetrower_Resume.pdf" target="_blank"></a>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- About Me -->
-        <!-- UNDER CONSTRUCTION -->
-        <div class="row" style="margin-top: 50px">
-            <div class=col-lg-4>
-                Photo
-            </div>
-            <div class=col-lg-8>
-                About Me
-            </div>
-        </div>
-
         <!-- Portfolio -->
-        <!-- UNDER CONSTRUCTION -->
-        <div class="row" style="margin-top: 50px">
+        <h4 class="mb-3 text-center" id="portfolio" style="margin-top: 50px">Portfolio</h4>
+        <p class="text-center">A showcase of some of my work can be found here.</p>
+        <div class="row">
             Portfolio
             |<a href="https://msp9612.github.io/TrainScheduler/" target='_blank' rel='no-loop no-reopener'>
                 Train Scheduler - Deployed</a>
@@ -108,26 +141,87 @@
             |<a href="https://github.com/msp9612/bamazon-node-app" target='_blank' rel='no-loop no-reopener'>
                 Bamazon - GitHub</a>
         </div>
+        <div class="row">
+            <div class="card-deck">
+                <div class="card">
+                    <img class="card-img-top" src="..." alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card-img-top" src="..." alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This card has supporting text below as a natural lead-in to additional
+                            content.</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card-img-top" src="..." alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                            additional content. This card has even longer content than the first to show that equal
+                            height action.</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="card-deck">
+                <div class="card">
+                    <img class="card-img-top" src="..." alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This card has supporting text below as a natural lead-in to additional
+                            content.</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card-img-top" src="..." alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                            additional content. This card has even longer content than the first to show that equal
+                            height action.</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- Contact -->
-        <!-- UNDER CONSTRUCTION -->
-        <div class="row" style="margin-top: 50px">
-            <form>
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" class="form-control" id="name" placeholder="John Smith" required="required">
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" class="form-control" id="email" placeholder="example@gmail.com"
-                        required="required">
-                </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea class="form-control" rows="5" id="message" required="required"></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary btn-lg">Submit</button>
-            </form>
+        <h4 class="mb-3 text-center" id="contact" style="margin-top: 50px">Contact Me</h4>
+        <p class="text-center">Any questions for me? You can send me an email using the handy form below.</p>
+        <div class="row mb-2">
+            <div class=col-lg-3></div>
+            <div class=col-lg-6>
+                <form action="mailto:msp9612@gmail.com" method="post" enctype="text/plain">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Your Name" required="required">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Your Email"
+                            required="required">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea class="form-control" rows="5" id="message" name="message" placeholder="Your Message"
+                            required="required"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+                </form>
+                </div? <div class=col-lg-3>
+            </div>
         </div>
     </div>
 
